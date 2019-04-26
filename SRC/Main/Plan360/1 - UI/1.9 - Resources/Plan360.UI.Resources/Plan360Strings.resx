@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ACTION_Activate" xml:space="preserve">
+    <value>Ativar</value>
+    <comment>Activate Action</comment>
+  </data>
+  <data name="ACTION_Create" xml:space="preserve">
+    <value>Adicionar</value>
+    <comment>Create new item action</comment>
+  </data>
+  <data name="ACTION_Deactivate" xml:space="preserve">
+    <value>Desativar</value>
+    <comment>Deactivate Action</comment>
+  </data>
+  <data name="ACTION_Update" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="STATUS_Active" xml:space="preserve">
+    <value>Ativo</value>
+  </data>
+  <data name="STATUS_Inactive" xml:space="preserve">
+    <value>Inativo</value>
+  </data>
+  <data name="ENTITY_Enterprise" xml:space="preserve">
+    <value>Empresa</value>
+  </data>
+  <data name="ENTITY_Plan" xml:space="preserve">
+    <value>Plano</value>
+  </data>
+  <data name="ENTITY_Template" xml:space="preserve">
+    <value>Modelo de plano</value>
+  </data>
+  <data name="ACTION_Edit" xml:space="preserve">
+    <value>Editar</value>
+    <comment>Edit/modify action</comment>
+  </data>
+  <data name="ENTERPRISE_Edit" xml:space="preserve">
+    <value>Editar Empresa</value>
+    <comment>Caption of Enterprise Edit Button</comment>
+  </data>
+  <data name="ENTERPRISE_List" xml:space="preserve">
+    <value>Empresas</value>
+    <comment>Header text of enterprise edit view</comment>
+  </data>
+  <data name="NO_DATA" xml:space="preserve">
+    <value>Sem dados para exibir</value>
+  </data>
+  <data name="PAGINATION_Of" xml:space="preserve">
+    <value>de</value>
+  </data>
+  <data name="PAGINATION_Page" xml:space="preserve">
+    <value>Página</value>
+  </data>
+  <data name="PAGINATION_Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="ERROR_Required" xml:space="preserve">
+    <value>Campo obrigatório</value>
+  </data>
+  <data name="SEARCH" xml:space="preserve">
+    <value>Pesquisar</value>
+  </data>
+  <data name="SEARCH_Go" xml:space="preserve">
+    <value>IR</value>
+  </data>
+  <data name="SEARCH_Placeholder" xml:space="preserve">
+    <value>Pesquisar...</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Voltar</value>
+  </data>
+  <data name="ENTERPRISE_Create" xml:space="preserve">
+    <value>Adicionar Empresa</value>
+  </data>
+  <data name="ENTERPRISE" xml:space="preserve">
+    <value>Empresa</value>
+  </data>
+  <data name="ERROR_GenericUpdate" xml:space="preserve">
+    <value>Erro não identificado; Verifique se os campos foram preenchidos corretamente e tente novamente.</value>
+  </data>
+  <data name="ERROR_Size" xml:space="preserve">
+    <value>O campo {0} possúi um tamanho máximo de {1} caracteres</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>A operação foi concluída com sucesso!</value>
+    <comment>CRUD</comment>
+  </data>
+  <data name="ACTION_Select" xml:space="preserve">
+    <value>-Selecione-</value>
+  </data>
+  <data name="PLAN_Step1" xml:space="preserve">
+    <value>Geral</value>
+  </data>
+  <data name="PLAN_Step2" xml:space="preserve">
+    <value>Agentes</value>
+  </data>
+  <data name="PLAN_Step3" xml:space="preserve">
+    <value>Entidades</value>
+  </data>
+  <data name="PLAN_Owner" xml:space="preserve">
+    <value>Proprietário</value>
+  </data>
+  <data name="AGENT_Role" xml:space="preserve">
+    <value>Função</value>
+  </data>
+  <data name="Empty" xml:space="preserve">
+    <value>Vazio</value>
+  </data>
+  <data name="PLAN_SelectedAgentsEmpty" xml:space="preserve">
+    <value>Sem agentes selecionados</value>
+  </data>
+  <data name="SALESFORCE" xml:space="preserve">
+    <value>F.V.</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>Data Fim</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Data de Início</value>
+  </data>
+  <data name="PLAN_SelectedAgentsCaption" xml:space="preserve">
+    <value>Representantes Selecionados</value>
+  </data>
+  <data name="AGENT" xml:space="preserve">
+    <value>Representante</value>
+  </data>
+  <data name="PLAN_SelectAgentsCaption" xml:space="preserve">
+    <value>Selecionar Representantes</value>
+  </data>
+  <data name="PLAN_OtherData" xml:space="preserve">
+    <value>Outros dados...</value>
+  </data>
+  <data name="PLAN_Step4" xml:space="preserve">
+    <value>Produtos</value>
+  </data>
+  <data name="PLAN_Step5" xml:space="preserve">
+    <value>Revisar e Salvar</value>
+  </data>
+  <data name="ENTITY_Metadata" xml:space="preserve">
+    <value>Metadado</value>
+  </data>
+  <data name="ENTITY_Metadatas" xml:space="preserve">
+    <value>Metadados</value>
+  </data>
+  <data name="ACTION_OperationConfirm" xml:space="preserve">
+    <value>Confirma operação ?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="PLAN_ConfirmEnterpriseChange" xml:space="preserve">
+    <value>Modificar a empresa irá resetar todos os dados do plano, deseja continuar?</value>
+  </data>
+  <data name="ENTITY_SelectEntity" xml:space="preserve">
+    <value>Entidade Vazia</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Quantidade</value>
+  </data>
+  <data name="ENTITYMETADATA_Field" xml:space="preserve">
+    <value>Campo</value>
+  </data>
+  <data name="ENTITYMETADATA_Value" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="PLAN_SearchEntityMetadataEmpty" xml:space="preserve">
+    <value>Selecione um metadado para continuar</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Erro</value>
+  </data>
+  <data name="BRAND" xml:space="preserve">
+    <value>Marca</value>
+  </data>
+  <data name="PRODUCT" xml:space="preserve">
+    <value>Produto</value>
+  </data>
+  <data name="PRODUCTCATEGORY" xml:space="preserve">
+    <value>Tipo de Produto</value>
+  </data>
+  <data name="ACTION_All" xml:space="preserve">
+    <value>-Todos-</value>
+  </data>
+  <data name="CALENDAR" xml:space="preserve">
+    <value>Ciclo</value>
+  </data>
+  <data name="ENTITY" xml:space="preserve">
+    <value>Entidade</value>
+  </data>
+  <data name="Owner" xml:space="preserve">
+    <value>Ger. Responsável</value>
+  </data>
+  <data name="PLAN_Create" xml:space="preserve">
+    <value>Criar Plano</value>
+  </data>
+  <data name="PLAN_Edit" xml:space="preserve">
+    <value>Editar Plano</value>
+  </data>
+  <data name="PLAN_SelectedEntitiesCaption" xml:space="preserve">
+    <value>Entidades Selecionadas</value>
+  </data>
+  <data name="PLAN_SelectedProductsCaption" xml:space="preserve">
+    <value>Produtos Selecionados</value>
+  </data>
+  <data name="PLAN_SelectEntitiesCaption" xml:space="preserve">
+    <value>Selecionar Entidades</value>
+  </data>
+  <data name="PLAN_SelectProducts" xml:space="preserve">
+    <value>Selecionar Produtos</value>
+  </data>
+  <data name="ROLE" xml:space="preserve">
+    <value>Cargo</value>
+  </data>
+  <data name="PLAN_AgentsEmpty" xml:space="preserve">
+    <value>Sem agentes selecionados. </value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="PLAN_SummaryTitle" xml:space="preserve">
+    <value>Resumo do Plano</value>
+  </data>
+  <data name="NotFill" xml:space="preserve">
+    <value>Não Preenchido</value>
+  </data>
+  <data name="Loaded" xml:space="preserve">
+    <value>Carregado</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Carregando</value>
+  </data>
+  <data name="AGENT_List" xml:space="preserve">
+    <value>Agentes</value>
+  </data>
+  <data name="ENTITY_List" xml:space="preserve">
+    <value>Entidades</value>
+  </data>
+  <data name="PLAN_List" xml:space="preserve">
+    <value>Planos</value>
+  </data>
+  <data name="PRODUCT_List" xml:space="preserve">
+    <value>Produtos</value>
+  </data>
+  <data name="ACTION_Parametrize" xml:space="preserve">
+    <value>Parametrizar</value>
+  </data>
+  <data name="ACTION_Remove" xml:space="preserve">
+    <value>Remover</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Criado</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Criado Por</value>
+  </data>
+  <data name="Modified" xml:space="preserve">
+    <value>Modificado</value>
+  </data>
+  <data name="ModifiedBy" xml:space="preserve">
+    <value>Modificado Por</value>
+  </data>
+  <data name="PLAN_SaveRedirect" xml:space="preserve">
+    <value>A operação foi concluída com sucesso! Deseja ir para a parametrização?</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="INTERNAL_INCONSISTENCE" xml:space="preserve">
+    <value>Erro interno! O Plano violou a consistência de dados, informe o suporte o erro {0}</value>
+  </data>
+  <data name="ERROR_RANGE" xml:space="preserve">
+    <value>Favor informe um valor entre {1} e {2}</value>
+  </data>
+  <data name="PLAN_Count" xml:space="preserve">
+    <value>Qtd</value>
+  </data>
+  <data name="PLAN_Total" xml:space="preserve">
+    <value>Tot</value>
+  </data>
+  <data name="PLAN_TotalA" xml:space="preserve">
+    <value>Taj</value>
+  </data>
+  <data name="BRAND_Create" xml:space="preserve">
+    <value>Adicionar Marca</value>
+  </data>
+  <data name="BRAND_Edit" xml:space="preserve">
+    <value>Editar Marca</value>
+  </data>
+  <data name="BRAND_List" xml:space="preserve">
+    <value>Marcas</value>
+  </data>
+  <data name="PRODUCTCATEGORY_Create" xml:space="preserve">
+    <value>Adicionar Tipo de Produto</value>
+  </data>
+  <data name="PRODUCTCATEGORY_Edit" xml:space="preserve">
+    <value>Editar Tipo de Produto</value>
+  </data>
+  <data name="PRODUCTCATEGORY_List" xml:space="preserve">
+    <value>Tipos de Produto</value>
+  </data>
+  <data name="InvoiceConfig" xml:space="preserve">
+    <value>InvoiceConfig</value>
+  </data>
+  <data name="Ean" xml:space="preserve">
+    <value>EAN</value>
+  </data>
+  <data name="PRODUCT_Create" xml:space="preserve">
+    <value>Adicionar Produto</value>
+  </data>
+  <data name="PRODUCT_Edit" xml:space="preserve">
+    <value>Editar Produto</value>
+  </data>
+  <data name="MENU_Administration" xml:space="preserve">
+    <value>Administração</value>
+  </data>
+  <data name="MENU_Configuration" xml:space="preserve">
+    <value>Configurações</value>
+  </data>
+  <data name="MENU_Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="MENU_Help" xml:space="preserve">
+    <value>Ajuda</value>
+  </data>
+  <data name="MENU_Integration" xml:space="preserve">
+    <value>Integração</value>
+  </data>
+  <data name="MENU_Plans" xml:space="preserve">
+    <value>Planos</value>
+  </data>
+  <data name="MENU_Reports" xml:space="preserve">
+    <value>Relatórios</value>
+  </data>
+  <data name="CALENDAR_List" xml:space="preserve">
+    <value>Ciclos</value>
+  </data>
+  <data name="MENU_Data" xml:space="preserve">
+    <value>Dados</value>
+  </data>
+  <data name="PLAN_Detail" xml:space="preserve">
+    <value>Detalhes do Plano</value>
+  </data>
+  <data name="PLAN_Remove" xml:space="preserve">
+    <value>Excluir Plano</value>
+  </data>
+  <data name="PLAN_Remove_Confirm" xml:space="preserve">
+    <value>Deseja mesmo excluir este plano?</value>
+  </data>
+  <data name="PLAN_Remove_InUse" xml:space="preserve">
+    <value>O plano não pode ser excluido pois já existem faturamentos realizados do mesmo</value>
+  </data>
+  <data name="PLAN_Remove_Success" xml:space="preserve">
+    <value>O Plano foi excluído com sucesso</value>
+  </data>
+  <data name="AGENT_Code" xml:space="preserve">
+    <value>Código Agente</value>
+  </data>
+  <data name="AGENT_ErpCode" xml:space="preserve">
+    <value>Código SAP</value>
+  </data>
+  <data name="PRODUCT_Code" xml:space="preserve">
+    <value>Cód Produto</value>
+  </data>
+  <data name="PRODUCT_PackSize" xml:space="preserve">
+    <value>Cx Emb</value>
+  </data>
+  <data name="REPORT_Summary" xml:space="preserve">
+    <value>Sumário do Ciclo</value>
+  </data>
+  <data name="TOTAL" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="TOTALA" xml:space="preserve">
+    <value>Total Ajustado</value>
+  </data>
+</root>

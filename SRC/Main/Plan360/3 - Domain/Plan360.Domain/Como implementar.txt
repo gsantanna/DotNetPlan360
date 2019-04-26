@@ -1,0 +1,6 @@
+﻿
+
+Onde os métodos de busca personalizadas devem existir?
+Estou criando na classe de repositório pois entendo que por ser a camada
+ mais proxima do banco então; deve ter o menor custo de memória. (confirmar)
+

@@ -1,0 +1,176 @@
+﻿@using Plan360.UI.Resources
+@using Plan360.UI.ViewModels.Plan
+
+@model PlanViewModel
+
+
+
+
+
+@{
+    ViewBag.Title = Plan360Strings.ACTION_Parametrize;
+}
+
+<h2>@Plan360Strings.ACTION_Parametrize</h2>
+<p> @Model.Name </p>
+
+
+@Html.AntiForgeryToken()
+
+@Html.HiddenFor(model => model.IdPlan)
+@Html.HiddenFor(model => model.Name)
+@Html.HiddenFor(model => model.IdCalendar)
+
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+<div class="table-responsive" id="PlanContainer">
+
+    <table id="tbPlan" class="table table-striped table-bordered table-hover table-condensed">
+
+        <tr>
+
+            <th class="fixed-column text-nowrap col-code">Código</th>
+            <th class="fixed-column text-nowrap col-brand">Produto </th>
+            <th class="fixed-columnc text-nowrap col-product ">Apresentação</th>
+            <th class="fixed-column text-nowrap col-code ">Cx Emb</th>
+            <th class="fixed-column col-code ">Estoque</th>
+            <th class="fixed-column col-code">Ciclo</th>
+            <th class="fixed-column col-code">Disponível</th>
+
+            @foreach (var ent in Model.PlanEntities.OrderBy(f => f.IdEntityMetadata).ThenBy(f => f.Value))
+            {
+                <th class="col-parametrizer">
+
+                    <table class="tbl_parametrizer_header">
+                        <tr>
+                            <td colspan="4" class="text-center">
+                                @ent.Value (@ent.PlanEntityCounts.Sum(f => f.Count))
+                            </td>
+                        </tr>
+                        <tr><td>@Plan360Strings.PLAN_Count</td><td>%</td><td>@Plan360Strings.PLAN_Total</td><td>@Plan360Strings.PLAN_TotalA</td></tr>
+                    </table>
+
+                </th>
+            }
+
+        </tr>
+
+        <tbody>
+            <!-- Produtos -->
+            @foreach (var prod in Model.PlanProducts)
+            {
+                <tr>
+
+                    <td>@Html.DisplayFor(mdl => prod.Product.Code)</td>
+                    <td>@Html.DisplayFor(mdl => prod.Product.BrandName)</td>
+                    <td>@Html.DisplayFor(mdl => prod.Product.Name)</td>
+
+
+                    <td class="text-center">
+
+                        @Html.DisplayFor(mdl => prod.Packsize)
+                    </td>
+
+
+                    <td> 
+                        <div class="total-product-stock text-center" idProduct="@prod.IdProduct">
+
+                              0
+
+                        </div> </td>
+
+                    <td>
+                        <div class="total-calendar-cell text-center " idProduct="@prod.IdProduct">
+                            0
+                        </div>
+                    </td>
+
+
+                    <td>
+                        <div class="avaliable-calendar-cell text-center" idProduct="@prod.IdProduct">
+                            0
+                        </div>
+                    </td>
+
+
+
+                    @foreach (var param in Model.PlanParameters.Where(f => f.IdPlanProduct == prod.IdPlanProduct).OrderBy(f => f.PlanEntity.IdEntityMetadata).ThenBy(f => f.PlanEntity.Value))
+                    {
+
+
+                        <td>
+                            <div class="tb_planparameter" idPlan="@param.IdPlan" idPlanParameter="@param.IdPlanParameter" idPlanProduct="@param.IdPlanProduct" idPlanEntity="@param.IdPlanEntity">
+                                <table class="tbl_parametrizer">
+                                    <tr>
+                                        <td>
+                                            @Html.EditorFor(f => Model.PlanParameters[Model.PlanParameters.IndexOf(param)].Count, new { htmlAttributes = new { @class = "form-control plan-param-count", idProduct = @param.PlanProduct.IdProduct, idPlanParameter = @param.IdPlanParameter, idPlan = @param.IdPlan } })
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(f => Model.PlanParameters[Model.PlanParameters.IndexOf(param)].Percent, new { htmlAttributes = new { @class = "form-control plan-param-percent", idProduct = @param.PlanProduct.IdProduct, idPlanParameter = @param.IdPlanParameter, idPlan = @param.IdPlan } })
+
+                                        </td>
+                                        <td>
+
+                                            @Html.EditorFor(f => Model.PlanParameters[Model.PlanParameters.IndexOf(param)].Total, new { htmlAttributes = new { @class = "form-control plan-param-total", @readonly = "readonly", idProduct = @param.PlanProduct.IdProduct, idPlanParameter = @param.IdPlanParameter } })
+
+                                        </td>
+                                        <td>
+                                            @Html.EditorFor(f => Model.PlanParameters[Model.PlanParameters.IndexOf(param)].TotalA, new { htmlAttributes = new { @class = "form-control plan-param-totala", @readonly = "readonly", idProduct = @param.PlanProduct.IdProduct, idPlanParameter = @param.IdPlanParameter } })
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                        </td>
+                    }
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+
+</div>
+
+
+<p>&nbsp;</p>
+
+<div class="form-group">
+    <input type="submit" id="btnSave" value="@Plan360Strings.ACTION_Update" class="btn btn-default" />
+
+</div>
+
+
+<div>
+    @Html.ActionLink(Plan360Strings.Back, "Index")
+</div>
+
+
+
+
+
+@section scripts
+{
+
+    <script type="text/javascript">
+
+        var Plan360Strings_ERROR_GenericUpdate = "@Html.Raw(Plan360Strings.ERROR_GenericUpdate)";
+        var Plan360Strings_Success =  "@Html.Raw(Plan360Strings.Success)";
+        var productInfo = @Html.Raw(Json.Encode(ViewBag.ProductInfo));
+
+    </script>
+
+    @*@Scripts.Render("~/bundles/jqueryval")*@
+
+
+
+    <script src="~/Scripts/Plan/Parametrize.js"></script>
+
+
+}
+
+

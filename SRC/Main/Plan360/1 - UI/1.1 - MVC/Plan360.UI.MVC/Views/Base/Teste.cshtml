@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Teste";
+}
+
+<h2>Teste</h2>
+
+@section scripts
+{
+
+
+
+    <script type="text/javascript">
+
+        var arrayTeste = {
+            'agents' : ["iaa", "ibb", "iccc", "iddd", "ieee"],
+            'id' : 2
+        };
+
+
+        $.ajax({
+            type: "POST",
+            traditional: true,
+            url: "/EntityData/J_GetDistinctValuesByEntityMetadata",
+            async: false,
+            data: JSON.stringify(arrayTeste),
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function(data) {
+                if (data.length >0 ) { 
+                } else { 
+                }
+            }
+        });
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Plan360</title>
+
+
+    @Styles.Render("~/Content/css")
+
+    @Styles.Render("~/Content/bootstrap-table")
+
+    @Scripts.Render("~/bundles/modernizr")
+
+    @Scripts.Render("~/bundles/jquery")
+
+    @Scripts.Render("~/bundles/JQueryUI")
+
+    @Scripts.Render("~/bundles/bootstrap")
+
+    @Scripts.Render("~/bundles/bootstrap-table")
+
+    @Scripts.Render("~/bundles/Plan360UI")
+
+
+
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Plan360", "Index", "Dashboard", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> @Plan360.UI.Resources.Plan360Strings.PLAN_List <span class="caret"></span></a>
+
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink(@Plan360.UI.Resources.Plan360Strings.PLAN_List, "Index", "Plan")</li>
+                            <li>@Html.ActionLink(@Plan360.UI.Resources.Plan360Strings.PLAN_Create, "Create", "Plan")</li>
+                        </ul>
+
+
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> @Plan360.UI.Resources.Plan360Strings.MENU_Administration <span class="caret"></span></a>
+
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink(@Plan360.UI.Resources.Plan360Strings.ENTERPRISE_List, "Index", "Enterprise")</li>
+                            <li>@Html.ActionLink(@Plan360.UI.Resources.Plan360Strings.CALENDAR_List, "Index", "Calendar")</li>
+                            <li>@Html.ActionLink(@Plan360.UI.Resources.Plan360Strings.PRODUCTCATEGORY_List, "Index", "ProductCategory")</li>
+                            <li>@Html.ActionLink(@Plan360.UI.Resources.Plan360Strings.BRAND_List, "Index", "Brand")</li>
+                            <li>@Html.ActionLink(@Plan360.UI.Resources.Plan360Strings.PRODUCT_List, "Index", "Product")</li>
+
+
+
+
+                        </ul>
+
+
+                    </li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> @Plan360.UI.Resources.Plan360Strings.MENU_Data <span class="caret"></span></a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="">@Plan360.UI.Resources.Plan360Strings.ENTITY </a></li>
+                            <li><a href="">@Plan360.UI.Resources.Plan360Strings.ENTITY_Metadatas </a></li>
+                        </ul>
+
+
+                    </li>
+
+
+
+
+
+
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> @Plan360.UI.Resources.Plan360Strings.MENU_Reports <span class="caret"></span></a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+
+                                @Html.ActionLink( @Plan360.UI.Resources.Plan360Strings.REPORT_Summary, "Summary","Report")
+
+                               </li>
+                            
+                        </ul>
+
+
+                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container body-content">
+
+        @Html.Partial("_NotificationPartial")
+
+
+        @RenderBody()
+        <hr />
+        <footer>
+
+
+
+            <p>
+                Plan360 <sup>&copy; </sup> main build: @typeof(MvcApplication).Assembly.GetName().Version
+            </p>
+
+
+
+        </footer>
+    </div>
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

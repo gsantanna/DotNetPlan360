@@ -1,0 +1,125 @@
+﻿@model IEnumerable<Plan360.UI.ViewModels.Report.Summary>
+
+@{
+    ViewBag.Title = "Summary";
+}
+
+<h2>@Plan360.UI.Resources.Plan360Strings.REPORT_Summary </h2>
+
+<p>
+
+    <a href="#" id="lnkExport">Exportar para Excel</a>
+
+</p>
+<table class="table" id="tblMain" data-toggle="table">
+    <thead>
+
+
+        <tr>
+            <th data-sortable="true">
+                @Html.DisplayNameFor(model => model.CalendarName)
+            </th>
+            <th data-sortable="true">
+                @Html.DisplayNameFor(model => model.AgentCode)
+            </th>
+            <th data-sortable="true">
+                @Html.DisplayNameFor(model => model.AgentName)
+            </th>
+            <th data-sortable="true">
+                @Html.DisplayNameFor(model => model.AgentErpCode)
+            </th>
+            <th data-sortable="true">
+                @Html.DisplayNameFor(model => model.ProductType)
+            </th>
+            <th data-sortable="true">
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th class="col-code" data-sortable="true">
+                @Html.DisplayNameFor(model => model.ProductCode)
+            </th>
+
+            <th data-sortable="true">
+                @Html.DisplayNameFor(model => model.Total)
+            </th>
+            <th data-sortable="true">
+                @Html.DisplayNameFor(model => model.TotalA)
+            </th>
+
+        </tr>
+    </thead>
+
+
+
+
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CalendarName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentErpCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductCode)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Total)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalA)
+            </td>
+
+        </tr>
+    }
+
+</table>
+
+
+
+
+
+
+
+@section scripts
+{
+
+    <script type="text/javascript" src="~/Scripts/TableExport/tableExport.js"></script>
+    <script type="text/javascript" src="~/Scripts/TableExport/jquery.base64.js"></script>
+
+
+    <script type="text/javascript">
+
+        $(function () {
+            $("#lnkExport").click(function () {
+
+                $("#tblMain").tableExport({
+                    type: 'excel',
+                    escape: 'false',
+                    tableName: 'Summary Report'
+                });
+            });
+
+            // $("#tblMain").bootstrapTable();
+
+
+        });
+    </script>
+
+
+}

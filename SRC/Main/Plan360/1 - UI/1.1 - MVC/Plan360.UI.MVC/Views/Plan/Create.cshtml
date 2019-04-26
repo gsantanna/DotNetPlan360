@@ -1,0 +1,120 @@
+﻿@using Plan360.UI.Resources
+@model Plan360.UI.ViewModels.Plan.PlanViewModel
+
+<h4>@ViewBag.Title</h4>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div role="tabpanel">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+
+                <li role="presentation" class="active"><a href="#step1" aria-controls="step1" role="tab" data-toggle="tab"> @Plan360Strings.PLAN_Step1 </a></li>
+                <li role="presentation" class=""><a href="#step2" aria-controls="step2" role="tab" data-toggle="tab"> @Plan360Strings.PLAN_Step2 </a></li>
+                <li role="presentation" class=""><a href="#step3" aria-controls="step3" role="tab" data-toggle="tab"> @Plan360Strings.PLAN_Step3 </a></li>
+                <li role="presentation" class=""><a href="#step4" aria-controls="step4" role="tab" data-toggle="tab"> @Plan360Strings.PLAN_Step4 </a></li>
+                <li role="presentation" class=""><a href="#step5" id="lnkstep5" aria-controls="step5" role="tab" data-toggle="tab"> @Plan360Strings.PLAN_Step5 </a></li>
+
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                @Html.Partial("_Create_Step1", Model)
+                @Html.Partial("_Create_Step2")
+                @Html.Partial("_Create_Step3")
+                @Html.Partial("_Create_Step4")
+                @Html.Partial("_Create_Step5")
+
+            </div>
+
+        </div>
+
+    </div>
+}
+
+
+@section Scripts {
+
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+    <script type="text/javascript">
+
+        var Plan360Strings_ACTION_Select = "@Plan360Strings.ACTION_Select";
+        var Plan360Strings_ACTION_All = "@Plan360Strings.ACTION_All";
+        var Plan360Strings_PLAN_ConfirmEnterpriseChange = "@Plan360Strings.PLAN_ConfirmEnterpriseChange";
+        var Plan360Strings_ACTION_OperationConfirm = "@Plan360Strings.ACTION_OperationConfirm";
+        var Plan360Strings_OK = "@Plan360Strings.OK";
+        var Plan360Strings_Cancel = "@Plan360Strings.Cancel";
+        var Plan360Strings_ENTITY_SelectEntity = "@Plan360Strings.ENTITY_SelectEntity";
+        var Plan360Strings_PLAN_SearchEntityMetadataEmpty = "@Plan360Strings.PLAN_SearchEntityMetadataEmpty";
+        var Plan360Strings_Error = "@Plan360Strings.Error";
+        var Plan360Strings_PLAN_AgentsEmpty = "@Plan360Strings.PLAN_AgentsEmpty";
+        var Plan360Strings_NotFill = "@Plan360Strings.NotFill";
+        var Plan360Strings_ERROR_GenericUpdate = "@Html.Raw(Plan360Strings.ERROR_GenericUpdate)";
+        var Plan360Strings_PLAN_SaveRedirect = "@Plan360Strings.PLAN_SaveRedirect";
+        var Plan360Strings_Success = "@Plan360Strings.Success";
+        var Plan360Strings_Yes = "@Plan360Strings.Yes";
+        var Plan360Strings_No = "@Plan360Strings.No";
+
+
+        var idPlan = @(Model != null ? Model.IdPlan : 0);;
+
+        var selectedAgents = new Array();
+        var selectedEntities = new Array();
+        var selectedProducts = new Array();
+        var _id_calendar = 0;
+        var _id_owner = 0;
+
+        @if (Model != null)
+    {
+
+        <text>   selectedAgents = </text>
+        @Html.Raw(Json.Encode(ViewBag.Agents))
+        <text>;</text>
+
+        <text>   selectedEntities = </text>
+        @Html.Raw(Json.Encode(ViewBag.Entities))
+        <text>;</text>
+
+        <text>   selectedProducts = </text>
+        @Html.Raw(Json.Encode(ViewBag.Products))
+        <text>;</text>
+
+        <text>_id_calendar =</text>
+        @Model.IdCalendar
+        <text>;</text>
+
+        <text>_id_owner =</text>
+        @Model.IdOwner
+        <text>;</text>
+
+
+
+
+    }
+
+
+    </script>
+
+
+    <script src="~/Scripts/Plan/Create-Combos.js"></script>
+    <script src="~/Scripts/Plan/Create-AgentLookup.js"></script>
+    <script src="~/Scripts/Plan/Create-EntityLookup.js"></script>
+    <script src="~/Scripts/Plan/Create-ProdutctLookup.js"></script>
+    <script src="~/Scripts/Plan/Create-Summary.js"></script>
+    <script src="~/Scripts/Plan/Create-Load.js"></script>
+
+
+
+}

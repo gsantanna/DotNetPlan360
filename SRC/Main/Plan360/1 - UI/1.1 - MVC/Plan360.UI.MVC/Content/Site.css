@@ -1,0 +1,211 @@
+﻿/************************************** ORIGINAL ***************************************/
+
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+input,select, textarea {
+    max-width: 280px;
+}
+
+
+/* Fixed columns configurations */
+
+.col-product {
+   
+
+    text-wrap: none;
+    white-space: nowrap;
+    min-width: 250px;
+}
+
+.col-brand {
+    text-wrap: none;
+    white-space: nowrap;
+    min-width: 150px;
+}
+
+.col-code {
+
+    min-width: 60px;
+}
+
+.col-parametrizer {
+    padding: 0px;
+    margin: 0px;
+
+}
+
+
+
+/************************************* CUSTOM *******************************************/
+
+/* bootstrap Popover*/
+.popover{
+    max-width: 300px;
+    width: 300px;
+}
+
+
+/* bootstrap Tab Fix*/
+.tab-pane {
+
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.nav-tabs {
+    margin-bottom: 0;
+}
+
+
+.nav-tabs {
+    margin-bottom: 0;
+}
+
+
+/* Loading animated GIF*/
+.loading-icon {
+
+    background-image: url('/Content/images/loading.gif');
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    background-size: 16px 16px;
+
+    margin: auto;
+    padding: 0px;    
+    /*min-height: 16px;
+    min-width: 16px;
+    text-align: center;*/
+
+   
+   
+
+}
+
+
+
+
+
+
+
+
+
+/*The last CRUD's column that contains Edit, Delete buttons*/
+.buttonscol
+{
+    width:50px;
+    text-align: center;
+
+}
+
+.buttonscol-2
+{
+    width:100px;
+    text-align: center;
+
+}
+
+.buttonscol-3
+{
+    width:150px;
+    text-align: center;
+
+}
+
+
+.statuscolumn {
+
+    width: 120px;
+    text-align: center;
+
+}
+
+.SuccessMessageNotification, .ErrorMessageNotification {
+
+    display: none;
+
+}
+
+.form-middle {
+    vertical-align: middle;
+ }
+
+
+
+.tbl_parametrizer_header td , .tbl_parametrizer td {
+
+    width: 25%;
+    padding: 0px 5px 0px 0px;
+    text-align: center;
+    min-width: 50px;
+
+
+}
+
+.tbl_parametrizer_header {
+
+    width: 100%;
+    min-width: 180px;
+    text-align: center;
+}
+.tbl_parametrizer {
+
+    width: 100%;
+    text-align: center;
+    
+
+}
+
+.tbl_parametrizer input {
+    width: 50px;
+}
+
+.tbl_parametrizer_label {
+    width: 50px;
+    border: 1px red;
+}
+
+.panel-lookup {
+    height: 420px;
+}
+
+.form-control-plan {
+    width: 500px !important;
+}
+
+.bgRed {
+    background-color: orangered !important;
+}
+
+
+.col-small {
+
+    width: 40px;
+    text-align: center;
+
+}
+.col-date {
+    width: 90px;
+}
+
+

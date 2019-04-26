@@ -1,0 +1,23 @@
+﻿
+@if (TempData.ContainsKey("SuccessMessage"))
+{
+
+    <div class="SuccessMessageNotification">
+
+        @TempData["SuccessMessage"]
+
+    </div>
+    
+}
+
+
+@if (TempData.ContainsKey("ErrorMessage"))
+{
+
+    <div class="ErrorMessageNotification">
+
+        @TempData["ErrorMessage"]
+
+    </div>
+
+}

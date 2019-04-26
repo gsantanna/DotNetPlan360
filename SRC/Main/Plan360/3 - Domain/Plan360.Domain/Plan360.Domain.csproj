@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{711ED897-A287-4013-B05B-9BCEC0BA8B90}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Plan360.Domain</RootNamespace>
+    <AssemblyName>Plan360.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Agent.cs" />
+    <Compile Include="Entities\AgentRole.cs" />
+    <Compile Include="Entities\Brand.cs" />
+    <Compile Include="Entities\Calendar.cs" />
+    <Compile Include="Entities\Enterprise.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\EntityData.cs" />
+    <Compile Include="Entities\EntityMetadata.cs" />
+    <Compile Include="Entities\EntityRecord.cs" />
+    <Compile Include="Entities\Invoice.cs" />
+    <Compile Include="Entities\InvoiceProduct.cs" />
+    <Compile Include="Entities\InvoiceProductSource.cs" />
+    <Compile Include="Entities\Plan.cs" />
+    <Compile Include="Entities\PlanEntity.cs" />
+    <Compile Include="Entities\PlanEntityCount.cs" />
+    <Compile Include="Entities\PlanParameter.cs" />
+    <Compile Include="Entities\PlanProduct.cs" />
+    <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\ProductCategory.cs" />
+    <Compile Include="Entities\Role.cs" />
+    <Compile Include="Entities\SalesForce.cs" />
+    <Compile Include="Entities\Stock.cs" />
+    <Compile Include="Entities\UserEnterpriseRole.cs" />
+    <Compile Include="Entities\UserProfile.cs" />
+    <Compile Include="Interfaces\Repositories\IAgentRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IAgentRoleRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IBrandRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ICalendarRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IEntityDataRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IEntityRecordRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IEntityMetatadaRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IPlanRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IProductRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IProductCategoryRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IRoleRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ISalesForceRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IUserEnterpriseRoleRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IInvoiceRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IInvoiceProductRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IInvoiceProductSourceRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IUserProfileRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IEnterpriseRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IRepositoryBase.cs" />
+    <Compile Include="Interfaces\Services\IAgentService.cs" />
+    <Compile Include="Interfaces\Services\IAgentRoleService.cs" />
+    <Compile Include="Interfaces\Services\IBrandService.cs" />
+    <Compile Include="Interfaces\Services\ICalendarService.cs" />
+    <Compile Include="Interfaces\Services\IEnterpriseService.cs" />
+    <Compile Include="Interfaces\Services\IEntityDataService.cs" />
+    <Compile Include="Interfaces\Services\IEntityMetatadaService.cs" />
+    <Compile Include="Interfaces\Services\IEntityRecordService.cs" />
+    <Compile Include="Interfaces\Services\IEntityService.cs" />
+    <Compile Include="Interfaces\Services\IInvoiceProductService.cs" />
+    <Compile Include="Interfaces\Services\IInvoiceProductSourceService.cs" />
+    <Compile Include="Interfaces\Services\IInvoiceService.cs" />
+    <Compile Include="Interfaces\Services\IPlanService.cs" />
+    <Compile Include="Interfaces\Services\IProductCategoryService.cs" />
+    <Compile Include="Interfaces\Services\IProductService.cs" />
+    <Compile Include="Interfaces\Services\IRoleService.cs" />
+    <Compile Include="Interfaces\Services\ISalesForceService.cs" />
+    <Compile Include="Interfaces\Services\IServiceBase.cs" />
+    <Compile Include="Interfaces\Services\IUserEnterpriseRoleService.cs" />
+    <Compile Include="Interfaces\Services\IUserProfileService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AgentRoleService.cs" />
+    <Compile Include="Services\PlanService.cs" />
+    <Compile Include="Services\ProductCategoryService.cs" />
+    <Compile Include="Services\EntityService.cs" />
+    <Compile Include="Services\EntityDataService.cs" />
+    <Compile Include="Services\EntityRecordService.cs" />
+    <Compile Include="Services\EntityMetadataService.cs" />
+    <Compile Include="Services\SalesForceService.cs" />
+    <Compile Include="Services\ProductService.cs" />
+    <Compile Include="Services\BrandService.cs" />
+    <Compile Include="Services\AgentService.cs" />
+    <Compile Include="Services\UserProfileService.cs" />
+    <Compile Include="Services\CalendarService.cs" />
+    <Compile Include="Services\EnterpriseService.cs" />
+    <Compile Include="Services\ServiceBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Como implementar.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,13 @@
+1.1 - MVC - Contains the UI Views and Controllers;
+1.2 - ViewModels - Contains all Viewmodels used by controllers and views (1.1)
+1.9 - Resources - Localized Resources strings for main system's funcionality.
+
+
+
+
+1 - Criar a Entidade  - Domain.Entities
+2 - Criar a configuração da entidade - Data.EntityConfig
+3 - Adicionar a configuração da entidade  Plan360DataContext.cs
+4 - Adicionar o DBSET Plan360DataContext.cs
+5 - Adicionar o Migrations e verificar no banco de dados se ficou tudo ok.
+

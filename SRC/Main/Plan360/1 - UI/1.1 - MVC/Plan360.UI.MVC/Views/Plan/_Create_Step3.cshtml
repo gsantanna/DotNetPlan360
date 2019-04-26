@@ -1,0 +1,158 @@
+﻿@using Plan360.UI.Resources
+
+
+    <!-- Begin Tab 3 - Plan Entities -->
+    <div role="tabpanel" class="tab-pane " id="step3">
+
+        
+
+        <div class="form-group" style="margin-top: 3px;">
+
+                <div class="col-md-5">
+                    <!-- Filters -->
+                    <div class="panel panel-default panel-lookup" >
+
+                        <div class="panel-heading">@Plan360Strings.PLAN_SelectEntitiesCaption</div>
+                        <div class="panel-body">
+
+                            <div class="form-group">
+                                <div class="control-label col-md-3">@Plan360Strings.ENTITY</div>
+                                <div class="col-md-9">
+                                    <select id="entityLookupEntity" class="form-control">
+                                        <option></option>
+                                    </select>
+                                    <label id="entityLookupEntity-loading" class="loading-icon"></label>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group" id="entityMetadataLookupGroup">
+                                <div class="control-label col-md-3">@Plan360Strings.ENTITY_Metadata</div>
+                                <div class="col-md-9">
+                                    <select id="entityMetadataLookupEntity" class="form-control">
+                                        <option></option>
+                                    </select>
+                                    <label id="entityMetadataLookupEntity-loading" class="loading-icon"></label>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <div class="col-md-8">
+
+                                </div>
+
+                                <div class="col-md-4 text-right">
+                                    <button id="entitiesLookup_btn" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-search"> @Plan360Strings.SEARCH </span>
+                                    </button>
+
+
+                                </div>
+
+                            </div>
+
+
+
+                            <table id="tbEntityLookupSearchResult" data-toggle="table" data-click-to-select="true" data-sortable="true"
+                                   data-height="200"
+                                   class="table table-hover table-striped">
+
+                                <thead>
+                                    <tr>
+                                        <th data-field="Selected" data-checkbox="true"></th>
+                                        <th data-field="IdEntityMetadata" data-visible="false"></th>
+                                        <th data-field="Field" data-visible="false">@Plan360Strings.ENTITYMETADATA_Field</th>
+                                        <th data-field="Value" data-sortable="true">@Plan360Strings.ENTITYMETADATA_Value </th>
+                                        <th data-field="Count" data-sortable="true">@Plan360Strings.Count</th>
+                                    </tr>
+                                </thead>
+                            </table>
+
+                        </div>
+                    </div>
+
+                    <!-- Filters -->
+                </div>
+
+                <div class="col-md-2 text-center" style="vertical-align: middle; margin-top: 30px;">
+
+
+                    <div>
+                        <button class="btn btn-default " id="entityLookup_btnAdd">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </button>
+                    </div>
+
+                    <div style="height:20px"></div>
+
+                    <div>
+                        <button class="btn btn-default " id="entityLookup_btnAddAll">
+                            <span class="glyphicon glyphicon-forward"></span>
+                        </button>
+                    </div>
+
+
+                    <div style="height:20px"></div>
+
+
+                    <div>
+                        <button class="btn btn-default " id="entityLookup_btnRemove">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </button>
+                    </div>
+
+                    <div style="height:20px"></div>
+
+                    <div>
+                        <button class="btn btn-default " id="entityLookup_btnRemoveAll" data-toggle="popover" data-trigger="manual" title=" btn ">
+                            <span class="glyphicon glyphicon-backward"></span>
+                        </button>
+                    </div>
+
+                    <div style="height:20px"></div>
+
+
+                </div>
+
+                <div class="col-md-5">
+
+                    <div class="panel panel-default panel-lookup">
+                        <div class="panel-heading">@Plan360Strings.PLAN_SelectedEntitiesCaption</div>
+
+
+
+                        <table id="tbSelectedEntities" data-toggle="table" data-click-to-select="true" data-sortable="true"
+                               data-height="365"
+                               class="table table-hover table-striped">
+
+                            <thead>
+                                <tr>
+
+                                    <th data-field="Selected" data-checkbox="true"></th>
+                                    <th data-field="IdEntityMetadata" data-visible="false"></th>
+                                    <th data-field="Field" data-sortable="true">@Plan360Strings.ENTITYMETADATA_Field</th>
+                                    <th data-field="Value" data-sortable="true">@Plan360Strings.ENTITYMETADATA_Value </th>
+                                    <th data-field="Count" data-sortable="true">@Plan360Strings.Count</th>
+
+
+                                </tr>
+                            </thead>
+                        </table>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+
+
+        </div>
+    <!-- End Tab 3 - Plan Entities -->
+
+

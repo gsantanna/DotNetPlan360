@@ -1,0 +1,10 @@
+﻿using System;
+
+namespace Plan360.UI.ViewModels.Plan
+{
+   public  class PlanAgentViewModel
+    {
+       public int IdPlan { get; set; }
+       public int IdAgent { get; set; }
+    }
+}

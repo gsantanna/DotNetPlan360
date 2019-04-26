@@ -1,0 +1,73 @@
+﻿@model Plan360.UI.ViewModels.Plan.PlanViewModel
+
+
+<!-- Begin Tab 1 - Plan General Data -->
+<div role="tabpanel" class="tab-pane active" id="step1">
+
+    <p>&nbsp;</p>
+
+    <!-- enterprise -->
+    <div class="form-group form-inline">
+
+        @Html.LabelFor(model => model.IdEnterprise, htmlAttributes: new { @class = "control-label col-md-2" })
+
+        <div class="col-md-8 ">
+
+            @Html.DropDownListFor(f => f.IdEnterprise, (SelectList) (ViewBag.EnterpriseSelect), new {@class = "form-control form-control-plan"})
+
+            <label id="IdEnterprise-loading" class="loading-icon"></label>
+            @Html.ValidationMessageFor(model => model.IdEnterprise, "", new { @class = "text-danger" })
+
+        </div>
+
+      
+
+
+
+    </div>
+    <!-- /enterprise-->
+    <!-- calendar -->
+    <div class="form-group form-inline">
+
+        @Html.LabelFor(model => model.IdCalendar, htmlAttributes: new { @class = "control-label col-md-2" })
+
+        <div class="col-md-10">
+            
+            <select id="IdCalendar" class="form-control"></select>
+            <label id="IdCalendar-loading" class="loading-icon"></label>
+
+
+        </div>
+    </div>
+    <!-- /calendar-->
+    <!-- Name -->
+    <div class="form-group form-inline">
+
+        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+
+        <div class="col-md-10">
+            @Html.EditorFor(f => f.Name, new { htmlAttributes = new { @class = "form-control form-control-plan" } })
+
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <!-- /Name-->
+    <!-- parametrizator's name -->
+    <div class="form-group form-inline">
+
+        @Html.LabelFor(model => model.IdOwner, htmlAttributes: new { @class = "control-label col-md-2" })
+
+        <div class="col-md-10">
+
+            <select id="IdOwner" class="form-control"></select>
+
+            <label id="IdOwner-loading" class="loading-icon"></label>
+
+
+        </div>
+    </div>
+    <!-- /parametrizator's name-->
+
+</div>
+
+<!-- End Tab 1 - Plan General Data -->

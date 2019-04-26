@@ -1,0 +1,180 @@
+﻿@using Plan360.UI.Resources
+<!-- Step 5-->
+<div role="tabpanel" class="tab-pane" id="step5">
+
+
+
+    <div class="panel-group" id="accSummary" role="tablist" aria-multiselectable="true">
+
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="accSummary-Step1">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" id="s5_PlanName" data-parent="#accordion" href="#accSummary-Step1-c" aria-expanded="true" aria-controls="accSummary-Step1-c">
+
+                        @Plan360Strings.PLAN_SummaryTitle : <span id="s5Name" class="alert-danger" ></span>
+
+                    </a>
+                </h4>
+            </div>
+            <div id="accSummary-Step1-c" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="accSummary-Step1">
+                <div class="panel-body">
+
+
+
+                    <div class="row">
+                        <div class="col-md-2">@Plan360Strings.ENTERPRISE:</div>
+                        <div class="col-md-10 text-left"> <span id="s5Enterprise"></span>  </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-2">@Plan360Strings.CALENDAR:</div>
+                        <div class="col-md-10 text-left"> <span id="s5Calendar"></span> </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2">@Plan360Strings.Owner:</div>
+                        <div class="col-md-10 text-left"> <span id="s5User"></span> </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="accSummary-Step2">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse"  data-parent="#accordion" href="#accSummary-Step2-c" aria-expanded="true" aria-controls="accSummary-Step2-c">
+                        @Plan360Strings.PLAN_SelectedAgentsCaption  <span id="s5SelectedAgentsCount" class="badge"></span>
+                    </a>
+                </h4>
+            </div>
+            <div id="accSummary-Step2-c" class="panel-collapse collapse" role="tabpanel" aria-labelledby="accSummary-Step2">
+                <div class="panel-body">
+
+
+
+
+
+                    <table id="s5tbSelectedAgents" data-toggle="table" data-click-to-select="true" data-sortable="true"
+                           class="table table-hover table-striped ">
+
+                        <thead>
+                            <tr>
+                                <th data-field="Code" data-sortable="true">@Plan360Strings.Code </th>
+                                <th data-field="Name" data-sortable="true">@Plan360Strings.Name</th>
+                                <th data-field="Role" data-sortable="true">@Plan360Strings.AGENT_Role </th>
+                            </tr>
+                        </thead>
+                    </table> 
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="accSummary-Step3">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#accSummary-Step3-c" aria-expanded="true" aria-controls="accSummary-Step3-c">
+                        @Plan360Strings.PLAN_SelectedEntitiesCaption <span id="s5SelectedEntitiesCount" class="badge"></span>
+                    </a>
+                </h4>
+            </div>
+            <div id="accSummary-Step3-c" class="panel-collapse collapse" role="tabpanel" aria-labelledby="accSummary-Step3">
+                <div class="panel-body">
+
+
+
+
+                    <table id="s5tbSelectedEntities" data-toggle="table" data-click-to-select="true" data-sortable="true"
+                           class="table table-hover table-striped">
+
+                        <thead>
+                            <tr>
+                                <th data-field="Field" data-sortable="true">@Plan360Strings.ENTITYMETADATA_Field</th>
+                                <th data-field="Value" data-sortable="true">@Plan360Strings.ENTITYMETADATA_Value </th>
+                                <th data-field="Count" data-sortable="true">@Plan360Strings.Count</th>
+
+
+                            </tr>
+                        </thead>
+                    </table>
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="accSummary-Step4">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#accSummary-Step4-c" aria-expanded="true" aria-controls="accSummary-Step4-c">
+                        @Plan360Strings.PLAN_SelectedProductsCaption <span id="s5SelectedProductsCount" class="badge"></span>
+                    </a>
+                </h4>
+            </div>
+            <div id="accSummary-Step4-c" class="panel-collapse collapse" role="tabpanel" aria-labelledby="accSummary-Step4">
+                <div class="panel-body">
+
+
+
+                    <table id="s5tbSelectedProducts" data-toggle="table" data-click-to-select="true" data-sortable="true"
+                           
+                           class="table table-hover table-striped">
+
+
+                        <thead>
+                            <tr>
+                                <th data-field="Code" data-visible="true">@Plan360Strings.Code</th>
+                                <th data-field="BrandName" data-sortable="true">@Plan360Strings.BRAND </th>
+                                <th data-field="Name" data-sortable="true">@Plan360Strings.PRODUCT</th>
+                            </tr>
+                        </thead>
+
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+    <button id="btnSave" data-loading-text="@Plan360Strings.Loading ..." class="btn btn-default">@Plan360Strings.ACTION_Update</button>
+
+
+
+
+</div>
+<!-- End Step 5-->

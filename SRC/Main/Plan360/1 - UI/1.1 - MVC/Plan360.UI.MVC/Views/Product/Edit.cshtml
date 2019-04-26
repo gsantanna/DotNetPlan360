@@ -1,0 +1,120 @@
+﻿@model Plan360.UI.ViewModels.Product.ProductViewModel
+
+
+@{
+    ViewBag.Title = @Plan360.UI.Resources.Plan360Strings.PRODUCT_Edit;
+}
+
+
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal form-middle">
+        <h4>  @Plan360.UI.Resources.Plan360Strings.PRODUCT_Edit </h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.IdProduct)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+
+            @Html.LabelFor(model => model.IdCategory, htmlAttributes: new { @class = "control-label col-md-2" })
+
+            <div class="col-md-10">
+
+                @Html.EditorFor(model => model.IdCategory, new { htmlAttributes = new { @class = "form-control" } })
+
+                @Html.ValidationMessageFor(model => model.IdCategory, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+
+            @Html.LabelFor(model => model.IdBrand, htmlAttributes: new { @class = "control-label col-md-2" })
+
+            <div class="col-md-10">
+
+                @Html.EditorFor(model => model.IdBrand, new { htmlAttributes = new { @class = "form-control" } })
+
+                @Html.ValidationMessageFor(model => model.IdBrand, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Code, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Code, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Code, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Ean, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Ean, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Ean, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Packsize, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Packsize, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Packsize, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+
+            <label class="control-label col-md-2">
+
+                @Plan360.UI.Resources.Plan360Strings.STATUS_Active
+
+
+            </label>
+
+
+
+            <div class="col-md-10">
+
+                @Html.CheckBoxFor(m => m.Active, new { htmlAttributes = new { @class = "form-control" } })
+
+
+                @Html.ValidationMessageFor(model => model.Active, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="@Plan360.UI.Resources.Plan360Strings.ACTION_Update" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink(Plan360.UI.Resources.Plan360Strings.Back, "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

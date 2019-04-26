@@ -1,0 +1,56 @@
+﻿@using Plan360.UI.Resources
+@model int?
+
+@{var fieldName = ViewData.TemplateInfo.HtmlFieldPrefix;}
+
+
+<div style="float: left">
+    <select id="@fieldName" name="@fieldName" class="form-control" style="width:100%"
+            data-val="true"
+            data-val-required="@Plan360Strings.ERROR_Required"
+            data-val-number="@Plan360Strings.ERROR_Required"></select>
+
+</div>
+
+<div id="dv_loading_@fieldName" class="loading-icon"></div>
+
+
+
+<script type="text/javascript">
+
+    $(function () {
+
+        $("#dv_loading_@fieldName").show();
+
+        var urlJson = "/Enterprise/J_GetAll";
+
+        $.getJSON(urlJson, function (data) {
+
+            var items = "<option> @Plan360Strings.ACTION_Select </option>";
+
+            $.each(data, function (idx, obj) {
+
+                if (obj.IdEnterprise == "@Model") {
+
+                    items += "<option selected='selected' value=" + obj.IdEnterprise + " >" + obj.Name + "</option>";
+
+                } else {
+                    items += "<option value=" + obj.IdEnterprise + " >" + obj.Name + "</option>";
+
+                }
+
+            }); //each
+
+            $("#@fieldName").html(items);
+            //$("#@fieldName").selectBoxIt({ theme: "bootstrap", showFirstOption: false });
+
+            $("#dv_loading_@fieldName").hide();
+
+
+        }); //getJSON
+
+    });//ready
+
+
+</script>
+

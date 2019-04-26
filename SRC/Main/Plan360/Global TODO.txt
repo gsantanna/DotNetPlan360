@@ -1,0 +1,24 @@
+
+#pendente - verificar se todas os _appservice estão declarados com nomes de variaveis iguais
+
+#pendente - Mudar ninject para módulos ao invés de referência.
+
+#pendentpendente - Colocar todos os deletes com cascade Active false.
+
+#5 - Colocar todos os ValidateAntiforgeryToken principalmente no PlanController 
+
+#6 - Colocar o plano para considerar parametrizações de outros planos no total disponível, colocar isto setado via configurações
+
+#7 - Colocar o plano para controlar conta-corrente
+
+#8 - Colocar TODOS os modelbinders com os binds só do sitens utilizados
+
+#9 - Colocar TODOS os cálculos nas camadas de application , já começando pela PlanController.cs
+
+#10- Colocar opção de REMOVER itens, como produtos, empresas e etc. des de que não estejam em uso.
+
+#11 - Colocar possibilidade de criar planos agregando entidades. ( Ex: Médicos GOB CATEGORIA x)
+
+
+
+

@@ -1,0 +1,144 @@
+﻿@using Plan360.UI.Resources
+<!-- Begin Tab 4 - Plan Products -->
+<div role="tabpanel" class="tab-pane" id="step4">
+
+    <div class="form-group" style="margin-top: 3px;">
+
+        <div class="col-md-5">
+            <!-- Filters -->
+            <div class="panel panel-default panel-lookup">
+
+                <div class="panel-heading">@Plan360Strings.PLAN_SelectProducts </div>
+                <div class="panel-body">
+
+                    <div class="form-group">
+                        <div class="control-label col-md-4">@Plan360Strings.BRAND </div>
+                        <div class="col-md-7">
+                            <select id="productLookupBrand" class="form-control">
+                                <option></option>
+                            </select>
+                        </div>
+                        <div class="col-md-1"><label id="productLookupBrand-loading" class="loading-icon"></label>
+</div>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="control-label col-md-4">@Plan360Strings.PRODUCTCATEGORY</div>
+                        <div class="col-md-8">
+                            <select id="productLookupCategory" class="form-control">
+                                <option></option>
+                            </select>
+                            <label id="productLookupCategory-loading" class="loading-icon"></label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                        <div class="col-md-8">
+
+                            <input type="text" id="productLookup_search" class="form-control" placeholder="@Plan360Strings.PLAN_OtherData" />
+                        </div>
+
+                        <div class="col-md-4 text-right">
+                            <button id="productLookup_btn" class="btn btn-default">
+                                <span class="glyphicon glyphicon-search"> @Plan360Strings.SEARCH </span>
+                            </button>
+
+
+                        </div>
+
+                    </div>
+
+                    <table id="tbProductLookupSearchResult" data-toggle="table" data-click-to-select="true" data-sortable="true"
+                           data-height="200"
+                           class="table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th data-field="Selected" data-checkbox="true"></th>
+                                <th data-field="IdProduct" data-visible="false"></th>
+                                <th data-field="Code" data-visible="false"></th>
+                                <th data-field="BrandName" data-sortable="true">@Plan360Strings.BRAND </th>
+                                <th data-field="Name" data-sortable="true">@Plan360Strings.PRODUCT</th>
+                            </tr>
+                        </thead>
+                    </table>
+
+                </div>
+            </div>
+            <!-- Filters -->
+        </div>
+
+        <div class="col-md-2 text-center" style="vertical-align: middle; margin-top: 30px;">
+
+
+            <div>
+                <button class="btn btn-default " id="productLookup_btnAdd">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </button>
+            </div>
+
+            <div style="height:20px"></div>
+
+            <div>
+                <button class="btn btn-default " id="productLookup_btnAddAll">
+                    <span class="glyphicon glyphicon-forward"></span>
+                </button>
+            </div>
+
+
+            <div style="height:20px"></div>
+
+
+            <div>
+                <button class="btn btn-default " id="productLookup_btnRemove">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </button>
+            </div>
+
+            <div style="height:20px"></div>
+
+            <div>
+                <button class="btn btn-default " id="productLookup_btnRemoveAll" data-toggle="popover" data-trigger="manual" title=" btn ">
+                    <span class="glyphicon glyphicon-backward"></span>
+                </button>
+            </div>
+
+            <div style="height:20px"></div>
+
+
+        </div>
+
+        <div class="col-md-5">
+
+            <div class="panel panel-default panel-lookup">
+                <div class="panel-heading">@Plan360Strings.PLAN_SelectedProductsCaption</div>
+
+
+                <table id="tbSelectedProducts" data-toggle="table" data-click-to-select="true" data-sortable="true"
+                       data-height="365"
+                       class="table table-hover table-striped">
+
+
+                    <thead>
+                    <tr>
+                        <th data-field="Selected" data-checkbox="true"></th>
+                        <th data-field="IdProduct" data-visible="false"></th>
+                        <th data-field="Code" data-visible="false"></th>
+                        <th data-field="BrandName" data-sortable="true">@Plan360Strings.BRAND </th>
+                        <th data-field="Name" data-sortable="true">@Plan360Strings.PRODUCT</th>
+                    </tr>
+                    </thead>
+
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<!-- End Tab 4 - Plan Products -->
+

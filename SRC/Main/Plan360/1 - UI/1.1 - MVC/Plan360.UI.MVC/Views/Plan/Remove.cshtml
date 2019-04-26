@@ -1,0 +1,66 @@
+﻿@model Plan360.UI.ViewModels.Plan.PlanViewModel
+
+@{
+    ViewBag.Title = Plan360.UI.Resources.Plan360Strings.PLAN_Remove;
+}
+
+<h2>  @Plan360.UI.Resources.Plan360Strings.PLAN_Remove_Confirm  </h2>
+
+
+
+@using (Html.BeginForm())
+{
+
+    <div>
+        <h4> @Plan360.UI.Resources.Plan360Strings.PLAN_Detail </h4>
+
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Calendar)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Calendar.Name)
+            </dd>
+
+        </dl>
+
+
+    </div>
+
+    if (@Model.Calendar.IsClosed)
+    {
+        <span style="color:red"> @Plan360.UI.Resources.Plan360Strings.PLAN_Remove_InUse </span>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <input type="submit" value="@Plan360.UI.Resources.Plan360Strings.ACTION_Remove" class="btn btn-default" />
+            </div>
+        </div>
+    }
+
+
+
+
+
+
+
+    <div class="row" style="padding-top:12px;">
+        <div class="col-md-12">
+            @Html.ActionLink(Plan360.UI.Resources.Plan360Strings.Back, "Index")
+        </div>
+    </div>
+
+
+
+}

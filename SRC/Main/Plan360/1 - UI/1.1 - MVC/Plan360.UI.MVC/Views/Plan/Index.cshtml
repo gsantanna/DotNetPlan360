@@ -1,0 +1,217 @@
+﻿@using Plan360.UI.Resources
+@model PagedList.IPagedList<Plan360.UI.ViewModels.Plan.PlanViewModel>
+
+
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+
+
+@{
+    ViewBag.Title = @Plan360Strings.PLAN_List;
+
+}
+
+<h2> @Plan360Strings.PLAN_List </h2>
+
+<div class="dvSearch">
+
+
+    @using (Html.BeginForm("Index", "Plan", FormMethod.Get, new { @class = "form-inline" }))
+    {
+        <input type="hidden" name="pageSize" value="@ViewBag.pageSize" />
+
+        <div class="col-md-12">
+
+            <div class="form-inline text-nowrap">
+                @Plan360Strings.ENTERPRISE &nbsp;
+                @Html.DropDownList("IdEnterprise", (SelectList) (ViewBag.EnterpriseSelect),
+                    new {@class = "form-control"})
+
+
+                @Plan360Strings.CALENDAR &nbsp;
+                @Html.DropDownList("IdCalendar", (SelectList) (ViewBag.CalendarSelect),
+                    new {@class = "form-control"})
+                &nbsp;
+
+
+                <div class="input-group">
+                    <input name="searchString" type="text" class="form-control" placeholder="@Plan360Strings.SEARCH_Placeholder" value="@ViewBag.CurrentFilter">
+
+                    <span class="input-group-btn">
+
+
+                        <input type="submit" class="btn btn-default" value="@Plan360Strings.SEARCH_Go" />
+
+
+                    </span>
+                </div>
+
+
+                <div class="input-group pull-right">
+                    <a href='@Url.Action("Create")' class="btn btn-sm btn-default">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>  @Plan360Strings.ACTION_Create
+                    </a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <br />
+        <br/>
+        
+    }
+
+
+</div>
+
+<br />
+<table class="table table-striped table-hover table-bordered ">
+    <tr>
+
+        <th>
+
+            @Html.ActionLink(Plan360Strings.Name,
+                "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter, pageSize = ViewBag.pageSize })
+
+        </th>
+
+        <th>
+            @Html.ActionLink(Plan360Strings.Owner,
+                         "Index", new { sortOrder = ViewBag.OwnerSortParam, currentFilter = ViewBag.CurrentFilter, pageSize = ViewBag.pageSize })
+
+        </th>
+
+
+        <th class="col-small">
+            @Html.ActionLink(Plan360Strings.AGENT_List,
+                         "Index", new { sortOrder = ViewBag.AgentsSortParam, currentFilter = ViewBag.CurrentFilter, pageSize = ViewBag.pageSize })
+
+        </th>
+
+        <th class="col-small">
+            @Html.ActionLink(Plan360Strings.ENTITY_List,
+                         "Index", new { sortOrder = ViewBag.EntitiesSortParam, currentFilter = ViewBag.CurrentFilter, pageSize = ViewBag.pageSize })
+
+        </th>
+
+        <th class="col-small">
+            @Html.ActionLink(Plan360Strings.PRODUCT_List,
+                "Index", new { sortOrder = ViewBag.ProductsSortParam, currentFilter = ViewBag.CurrentFilter, pageSize = ViewBag.pageSize })
+
+        </th>
+
+
+        <th class="text-center">
+            @Html.ActionLink(Plan360Strings.Created,
+                "Index", new { sortOrder = ViewBag.CreatedSortParam, currentFilter = ViewBag.CurrentFilter, pageSize = ViewBag.pageSize })
+
+        </th>
+        <th class="text-center">
+            @Html.ActionLink(Plan360Strings.Modified,
+                "Index", new { sortOrder = ViewBag.ModifiedSortParam, currentFilter = ViewBag.CurrentFilter, pageSize = ViewBag.pageSize })
+
+        </th>
+
+
+
+
+
+        <th class="buttonscol"></th>
+    </tr>
+
+    @if (Model.Count == 0)
+    {
+        <tr>
+            <td colspan="999">
+                @Plan360Strings.NO_DATA
+            </td>
+        </tr>
+    }
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Owner.Name)
+            </td>
+
+            <td class="text-center">
+                @item.Agents.Count()
+            </td>
+
+            <td class="text-center">
+                @item.PlanEntities.Count()
+            </td>
+
+            <td class="text-center">
+                @item.PlanProducts.Count()
+            </td>
+
+            <td class="col-date">
+                @Html.DisplayFor(modelItem => item.Created)
+            </td>
+
+            <td class="col-date">
+                @Html.DisplayFor(modelItem => item.Modified)
+            </td>
+            <td class="buttonscol-3">
+
+                <a href='@Url.Action("Edit", new {id = item.IdPlan})' class="btn btn-sm btn-default "
+                   title="@Plan360Strings.ACTION_Edit">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </a>
+
+                <a href='@Url.Action("Parametrize", new {id = item.IdPlan})' class="btn btn-sm btn-default "
+                   title="@Plan360Strings.ACTION_Parametrize">
+                    <span class="glyphicon glyphicon-cog"></span>
+                </a>
+
+             
+
+                <a href='@Url.Action("Remove", new {id = item.IdPlan    })'    title= '@(  item.Calendar.IsClosed ?  Plan360Strings.PLAN_Remove_InUse : Plan360Strings.ACTION_Remove     )'  
+                                                                                 class='btn btn-sm btn-default @(item.Calendar.IsClosed ? " disabled":"")  ' 
+                   title="@Plan360Strings.ACTION_Remove">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </a>
+
+
+
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+
+@Html.Partial("_PaginatorPartial", Model)
+
+
+
+@section scripts
+{
+    <script language="javascript">
+        
+        $(function () {
+
+            $("#IdEnterprise").change(function() {
+
+                $("form").submit();
+
+            });
+
+            $("#IdCalendar").change(function() {
+                $("form").submit();
+            });
+
+        });//ready
+
+    </script>
+
+}

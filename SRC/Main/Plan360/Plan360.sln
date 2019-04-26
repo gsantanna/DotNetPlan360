@@ -1,0 +1,220 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - UI", "1 - UI", "{906C32BE-121A-4807-AADE-30CC350F94E1}"
+	ProjectSection(SolutionItems) = preProject
+		1 - Information.txt = 1 - Information.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{104A306F-344B-4C8B-8778-41DBCCF9D179}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{FA263A30-E132-4DB0-A552-B69CAE069A81}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{7D96E2E6-5318-4A25-8A77-C4D624D1A863}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{2C8B6AAE-88A5-4014-9628-1766D3DCC9FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1 - MVC", "1.1 - MVC", "{B3176A51-961A-4D4B-A322-3BD5278EA07B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2 - ViewModels", "1.2 - ViewModels", "{02442C0F-218E-41EC-96B7-8883EA3CD86A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Utility", "5 - Utility", "{C8CF18EF-ADF0-4523-AF0C-495B15C1A54B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plan360.UI.ViewModels", "1 - UI\1.2 - ViewModels\Plan360.UI.ViewModels\Plan360.UI.ViewModels.csproj", "{D9EEC8AD-20A4-4C05-8014-BB4BDE63D337}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plan360.Infra.Data", "4 - Infra\4.1 - Data\Plan360.Infra.Data\Plan360.Infra.Data.csproj", "{E41E6E01-DE8E-40FB-BA7D-02EB8C86E99B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plan360.Domain", "3 - Domain\Plan360.Domain\Plan360.Domain.csproj", "{711ED897-A287-4013-B05B-9BCEC0BA8B90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plan360.UI.MVC", "1 - UI\1.1 - MVC\Plan360.UI.MVC\Plan360.UI.MVC.csproj", "{FC944FF3-B009-45BB-BA4E-5D1DB97F26F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.9 - Resources", "1.9 - Resources", "{11DC967B-123F-441F-A5FB-5A899F6569F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plan360.UI.Resources", "1 - UI\1.9 - Resources\Plan360.UI.Resources\Plan360.UI.Resources.csproj", "{973D3EF5-8367-4787-9FAE-8CE5D521BC8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plan360.Application", "2 - Application\2.1 - Application\Plan360.Application\Plan360.Application.csproj", "{61CBA8E6-02AE-4700-9F02-6C18414BB76B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.1 - Application", "2.1 - Application", "{66CBA49F-00A4-4E33-BDFA-A2A47C6D70A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1 - Utilities", "5.1 - Utilities", "{70E774F3-8BD9-40E1-8314-09960271A816}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plan360.Utilities", "5 - Utility\5.1 - Utilities\Plan360.Utilities\Plan360.Utilities.csproj", "{A1805CE6-9A94-4330-81FD-C6EC703708F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - Schenduler", "4.2 - Schenduler", "{82997D24-C4B2-481A-BAF0-35C167EE7593}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plan360.Infra.Schenduler", "4 - Infra\4.2 - Schenduler\Plan360.Infra.Schenduler\Plan360.Infra.Schenduler.csproj", "{EF28169C-8557-4CAF-8CB0-94E6CFBA4949}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plan360.Infra.Schenduler.Test", "4 - Infra\4.2 - Schenduler\Plan360.Infra.Schenduler.Test\Plan360.Infra.Schenduler.Test.csproj", "{1332CFBE-2A7B-415C-9050-FA113214C698}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2DC22DCC-1DF0-41F3-84BA-32A96243B79D}"
+	ProjectSection(SolutionItems) = preProject
+		Global TODO.txt = Global TODO.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3 - JsModels", "1.3 - JsModels", "{9A414A06-EE52-43EB-8AC2-5BCD28217C31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plan360.UI.JsModels", "1 - UI\1.3 - JsModels\Plan360.UI.JsModels\Plan360.UI.JsModels.csproj", "{6A48F2DC-0937-4E70-9E66-447DB830AA0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plan360.Infra.Data.IoC", "4 - Infra\4.1 - Data\Plan360.Infra.Data.IoC\Plan360.Infra.Data.IoC.csproj", "{1F88D556-BA2B-40F9-951C-3C095508B7B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - Integration", "6 - Integration", "{B3D00D5C-58CB-458A-BE1E-DADA99184565}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.1 - Core", "6.1 - Core", "{B2477AFE-1ECD-42D7-912C-8F7BB04CE3EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.2 - Connectors", "6.2 - Connectors", "{915EF2A8-283A-4626-BECF-2160F28FE05F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plan360.Integration.Core", "6 - Integration\6.1 - Core\Plan360.Integration.Core\Plan360.Integration.Core.csproj", "{ECCFE019-735C-4F54-82F3-4BB3574C42F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plan360.Integration.Connectors.Excel", "6 - Integration\6.2 - Connectors\Excel\Plan360.Integration.Connectors.Excel\Plan360.Integration.Connectors.Excel.csproj", "{345D361F-69AE-4422-8A40-C6051357A925}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Excel", "Excel", "{2B5B5474-DB63-4775-B298-E40852B1D26B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9EEC8AD-20A4-4C05-8014-BB4BDE63D337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9EEC8AD-20A4-4C05-8014-BB4BDE63D337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9EEC8AD-20A4-4C05-8014-BB4BDE63D337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9EEC8AD-20A4-4C05-8014-BB4BDE63D337}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E41E6E01-DE8E-40FB-BA7D-02EB8C86E99B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E41E6E01-DE8E-40FB-BA7D-02EB8C86E99B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E41E6E01-DE8E-40FB-BA7D-02EB8C86E99B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E41E6E01-DE8E-40FB-BA7D-02EB8C86E99B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{711ED897-A287-4013-B05B-9BCEC0BA8B90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{711ED897-A287-4013-B05B-9BCEC0BA8B90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{711ED897-A287-4013-B05B-9BCEC0BA8B90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{711ED897-A287-4013-B05B-9BCEC0BA8B90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC944FF3-B009-45BB-BA4E-5D1DB97F26F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC944FF3-B009-45BB-BA4E-5D1DB97F26F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC944FF3-B009-45BB-BA4E-5D1DB97F26F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC944FF3-B009-45BB-BA4E-5D1DB97F26F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{973D3EF5-8367-4787-9FAE-8CE5D521BC8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{973D3EF5-8367-4787-9FAE-8CE5D521BC8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{973D3EF5-8367-4787-9FAE-8CE5D521BC8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{973D3EF5-8367-4787-9FAE-8CE5D521BC8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61CBA8E6-02AE-4700-9F02-6C18414BB76B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61CBA8E6-02AE-4700-9F02-6C18414BB76B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61CBA8E6-02AE-4700-9F02-6C18414BB76B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61CBA8E6-02AE-4700-9F02-6C18414BB76B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1805CE6-9A94-4330-81FD-C6EC703708F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1805CE6-9A94-4330-81FD-C6EC703708F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1805CE6-9A94-4330-81FD-C6EC703708F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1805CE6-9A94-4330-81FD-C6EC703708F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF28169C-8557-4CAF-8CB0-94E6CFBA4949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF28169C-8557-4CAF-8CB0-94E6CFBA4949}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF28169C-8557-4CAF-8CB0-94E6CFBA4949}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF28169C-8557-4CAF-8CB0-94E6CFBA4949}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1332CFBE-2A7B-415C-9050-FA113214C698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1332CFBE-2A7B-415C-9050-FA113214C698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1332CFBE-2A7B-415C-9050-FA113214C698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1332CFBE-2A7B-415C-9050-FA113214C698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A48F2DC-0937-4E70-9E66-447DB830AA0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A48F2DC-0937-4E70-9E66-447DB830AA0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A48F2DC-0937-4E70-9E66-447DB830AA0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A48F2DC-0937-4E70-9E66-447DB830AA0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F88D556-BA2B-40F9-951C-3C095508B7B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F88D556-BA2B-40F9-951C-3C095508B7B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F88D556-BA2B-40F9-951C-3C095508B7B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F88D556-BA2B-40F9-951C-3C095508B7B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECCFE019-735C-4F54-82F3-4BB3574C42F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECCFE019-735C-4F54-82F3-4BB3574C42F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECCFE019-735C-4F54-82F3-4BB3574C42F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECCFE019-735C-4F54-82F3-4BB3574C42F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{345D361F-69AE-4422-8A40-C6051357A925}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{345D361F-69AE-4422-8A40-C6051357A925}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{345D361F-69AE-4422-8A40-C6051357A925}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{345D361F-69AE-4422-8A40-C6051357A925}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2C8B6AAE-88A5-4014-9628-1766D3DCC9FB} = {7D96E2E6-5318-4A25-8A77-C4D624D1A863}
+		{B3176A51-961A-4D4B-A322-3BD5278EA07B} = {906C32BE-121A-4807-AADE-30CC350F94E1}
+		{02442C0F-218E-41EC-96B7-8883EA3CD86A} = {906C32BE-121A-4807-AADE-30CC350F94E1}
+		{D9EEC8AD-20A4-4C05-8014-BB4BDE63D337} = {02442C0F-218E-41EC-96B7-8883EA3CD86A}
+		{E41E6E01-DE8E-40FB-BA7D-02EB8C86E99B} = {2C8B6AAE-88A5-4014-9628-1766D3DCC9FB}
+		{711ED897-A287-4013-B05B-9BCEC0BA8B90} = {FA263A30-E132-4DB0-A552-B69CAE069A81}
+		{FC944FF3-B009-45BB-BA4E-5D1DB97F26F6} = {B3176A51-961A-4D4B-A322-3BD5278EA07B}
+		{11DC967B-123F-441F-A5FB-5A899F6569F4} = {906C32BE-121A-4807-AADE-30CC350F94E1}
+		{973D3EF5-8367-4787-9FAE-8CE5D521BC8C} = {11DC967B-123F-441F-A5FB-5A899F6569F4}
+		{61CBA8E6-02AE-4700-9F02-6C18414BB76B} = {66CBA49F-00A4-4E33-BDFA-A2A47C6D70A2}
+		{66CBA49F-00A4-4E33-BDFA-A2A47C6D70A2} = {104A306F-344B-4C8B-8778-41DBCCF9D179}
+		{70E774F3-8BD9-40E1-8314-09960271A816} = {C8CF18EF-ADF0-4523-AF0C-495B15C1A54B}
+		{A1805CE6-9A94-4330-81FD-C6EC703708F7} = {70E774F3-8BD9-40E1-8314-09960271A816}
+		{82997D24-C4B2-481A-BAF0-35C167EE7593} = {7D96E2E6-5318-4A25-8A77-C4D624D1A863}
+		{EF28169C-8557-4CAF-8CB0-94E6CFBA4949} = {82997D24-C4B2-481A-BAF0-35C167EE7593}
+		{1332CFBE-2A7B-415C-9050-FA113214C698} = {82997D24-C4B2-481A-BAF0-35C167EE7593}
+		{9A414A06-EE52-43EB-8AC2-5BCD28217C31} = {906C32BE-121A-4807-AADE-30CC350F94E1}
+		{6A48F2DC-0937-4E70-9E66-447DB830AA0F} = {9A414A06-EE52-43EB-8AC2-5BCD28217C31}
+		{1F88D556-BA2B-40F9-951C-3C095508B7B5} = {2C8B6AAE-88A5-4014-9628-1766D3DCC9FB}
+		{B2477AFE-1ECD-42D7-912C-8F7BB04CE3EA} = {B3D00D5C-58CB-458A-BE1E-DADA99184565}
+		{915EF2A8-283A-4626-BECF-2160F28FE05F} = {B3D00D5C-58CB-458A-BE1E-DADA99184565}
+		{ECCFE019-735C-4F54-82F3-4BB3574C42F1} = {B2477AFE-1ECD-42D7-912C-8F7BB04CE3EA}
+		{345D361F-69AE-4422-8A40-C6051357A925} = {2B5B5474-DB63-4775-B298-E40852B1D26B}
+		{2B5B5474-DB63-4775-B298-E40852B1D26B} = {915EF2A8-283A-4626-BECF-2160F28FE05F}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 14
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://rguimaraes.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = 1\u0020-\u0020UI\\1.2\u0020-\u0020ViewModels\\Plan360.UI.ViewModels\\Plan360.UI.ViewModels.csproj
+		SccProjectTopLevelParentUniqueName1 = Plan360.sln
+		SccProjectName1 = 1\u0020-\u0020UI/1.2\u0020-\u0020ViewModels/Plan360.UI.ViewModels
+		SccLocalPath1 = 1\u0020-\u0020UI\\1.2\u0020-\u0020ViewModels\\Plan360.UI.ViewModels
+		SccProjectUniqueName2 = 4\u0020-\u0020Infra\\4.1\u0020-\u0020Data\\Plan360.Infra.Data\\Plan360.Infra.Data.csproj
+		SccProjectTopLevelParentUniqueName2 = Plan360.sln
+		SccProjectName2 = 4\u0020-\u0020Infra/4.1\u0020-\u0020Data/Plan360.Infra.Data
+		SccLocalPath2 = 4\u0020-\u0020Infra\\4.1\u0020-\u0020Data\\Plan360.Infra.Data
+		SccProjectUniqueName3 = 3\u0020-\u0020Domain\\Plan360.Domain\\Plan360.Domain.csproj
+		SccProjectTopLevelParentUniqueName3 = Plan360.sln
+		SccProjectName3 = 3\u0020-\u0020Domain/Plan360.Domain
+		SccLocalPath3 = 3\u0020-\u0020Domain\\Plan360.Domain
+		SccProjectUniqueName4 = 1\u0020-\u0020UI\\1.1\u0020-\u0020MVC\\Plan360.UI.MVC\\Plan360.UI.MVC.csproj
+		SccProjectTopLevelParentUniqueName4 = Plan360.sln
+		SccProjectName4 = 1\u0020-\u0020UI/1.1\u0020-\u0020MVC/Plan360.UI.MVC
+		SccLocalPath4 = 1\u0020-\u0020UI\\1.1\u0020-\u0020MVC\\Plan360.UI.MVC
+		SccProjectUniqueName5 = 1\u0020-\u0020UI\\1.9\u0020-\u0020Resources\\Plan360.UI.Resources\\Plan360.UI.Resources.csproj
+		SccProjectTopLevelParentUniqueName5 = Plan360.sln
+		SccProjectName5 = 1\u0020-\u0020UI/1.9\u0020-\u0020Resources/Plan360.UI.Resources
+		SccLocalPath5 = 1\u0020-\u0020UI\\1.9\u0020-\u0020Resources\\Plan360.UI.Resources
+		SccProjectUniqueName6 = 2\u0020-\u0020Application\\2.1\u0020-\u0020Application\\Plan360.Application\\Plan360.Application.csproj
+		SccProjectTopLevelParentUniqueName6 = Plan360.sln
+		SccProjectName6 = 2\u0020-\u0020Application/2.1\u0020-\u0020Application/Plan360.Application
+		SccLocalPath6 = 2\u0020-\u0020Application\\2.1\u0020-\u0020Application\\Plan360.Application
+		SccProjectUniqueName7 = 5\u0020-\u0020Utility\\5.1\u0020-\u0020Utilities\\Plan360.Utilities\\Plan360.Utilities.csproj
+		SccProjectTopLevelParentUniqueName7 = Plan360.sln
+		SccProjectName7 = 5\u0020-\u0020Utility/5.1\u0020-\u0020Utilities/Plan360.Utilities
+		SccLocalPath7 = 5\u0020-\u0020Utility\\5.1\u0020-\u0020Utilities\\Plan360.Utilities
+		SccProjectUniqueName8 = 4\u0020-\u0020Infra\\4.2\u0020-\u0020Schenduler\\Plan360.Infra.Schenduler\\Plan360.Infra.Schenduler.csproj
+		SccProjectTopLevelParentUniqueName8 = Plan360.sln
+		SccProjectName8 = 4\u0020-\u0020Infra/4.2\u0020-\u0020Schenduler/Plan360.Infra.Schenduler
+		SccLocalPath8 = 4\u0020-\u0020Infra\\4.2\u0020-\u0020Schenduler\\Plan360.Infra.Schenduler
+		SccProjectUniqueName9 = 4\u0020-\u0020Infra\\4.2\u0020-\u0020Schenduler\\Plan360.Infra.Schenduler.Test\\Plan360.Infra.Schenduler.Test.csproj
+		SccProjectTopLevelParentUniqueName9 = Plan360.sln
+		SccProjectName9 = 4\u0020-\u0020Infra/4.2\u0020-\u0020Schenduler/Plan360.Infra.Schenduler.Test
+		SccLocalPath9 = 4\u0020-\u0020Infra\\4.2\u0020-\u0020Schenduler\\Plan360.Infra.Schenduler.Test
+		SccProjectUniqueName10 = 1\u0020-\u0020UI\\1.3\u0020-\u0020JsModels\\Plan360.UI.JsModels\\Plan360.UI.JsModels.csproj
+		SccProjectTopLevelParentUniqueName10 = Plan360.sln
+		SccProjectName10 = 1\u0020-\u0020UI/1.3\u0020-\u0020JsModels/Plan360.UI.JsModels
+		SccLocalPath10 = 1\u0020-\u0020UI\\1.3\u0020-\u0020JsModels\\Plan360.UI.JsModels
+		SccProjectUniqueName11 = 4\u0020-\u0020Infra\\4.1\u0020-\u0020Data\\Plan360.Infra.Data.IoC\\Plan360.Infra.Data.IoC.csproj
+		SccProjectTopLevelParentUniqueName11 = Plan360.sln
+		SccProjectName11 = 4\u0020-\u0020Infra/4.1\u0020-\u0020Data/Plan360.Infra.Data.IoC
+		SccLocalPath11 = 4\u0020-\u0020Infra\\4.1\u0020-\u0020Data\\Plan360.Infra.Data.IoC
+		SccProjectUniqueName12 = 6\u0020-\u0020Integration\\6.1\u0020-\u0020Core\\Plan360.Integration.Core\\Plan360.Integration.Core.csproj
+		SccProjectTopLevelParentUniqueName12 = Plan360.sln
+		SccProjectName12 = 6\u0020-\u0020Integration/6.1\u0020-\u0020Core/Plan360.Integration.Core
+		SccLocalPath12 = 6\u0020-\u0020Integration\\6.1\u0020-\u0020Core\\Plan360.Integration.Core
+		SccProjectUniqueName13 = 6\u0020-\u0020Integration\\6.2\u0020-\u0020Connectors\\Excel\\Plan360.Integration.Connectors.Excel\\Plan360.Integration.Connectors.Excel.csproj
+		SccProjectTopLevelParentUniqueName13 = Plan360.sln
+		SccProjectName13 = 6\u0020-\u0020Integration/6.2\u0020-\u0020Connectors/Excel/Plan360.Integration.Connectors.Excel
+		SccLocalPath13 = 6\u0020-\u0020Integration\\6.2\u0020-\u0020Connectors\\Excel\\Plan360.Integration.Connectors.Excel
+	EndGlobalSection
+EndGlobal
